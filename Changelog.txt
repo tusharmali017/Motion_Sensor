@@ -1,4 +1,7 @@
 Version 1.0.0
 
-- Implemented a code for testing the PIR Motion sensor.
-- Tested when it detects IRIV light, LED turned ON and data sends through modbus to Planetary Subunits.
+Completed- 
+
+- Implemented a code for testing the PIR Motion sensor using PIC24FJ128GA606 controller.
+- Tested when it detects IR/IV light, LED turned ON and digital data received on controller pin.
+- Collected Data sends through MODBUS protocol to Planetary Subunit(GUI).

@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>FWS_Motion_PIR</name>
+            <name>FWS_Motion_Sensor</name>
             <creation-uuid>7bc54c3a-308a-4ff2-a9f7-9bc2e85bccdc</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>

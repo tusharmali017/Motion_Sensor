@@ -415,25 +415,25 @@ __FDEVOPT1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x627d
+.debug_info       0x000000       0x624a
  *(.debug_info)
- .debug_info      0x000000        0x6ee build/default/production/APP/Modbus/Lib/modbus_slave.o
- .debug_info      0x0006ee        0x2d0 build/default/production/APP/Modbus/modbusdefines.o
- .debug_info      0x0009be        0x22f build/default/production/APP/app.o
- .debug_info      0x000bed        0xabb build/default/production/APP/callback.o
- .debug_info      0x0016a8        0x55c build/default/production/APP/isr.o
- .debug_info      0x001c04        0x43b build/default/production/APP/lcdslave.o
- .debug_info      0x00203f        0x41c build/default/production/APP/sensor.o
- .debug_info      0x00245b        0x17c build/default/production/BIOS/bios.o
- .debug_info      0x0025d7        0x8f1 build/default/production/BIOS/i2c1.o
- .debug_info      0x002ec8        0x8b7 build/default/production/BIOS/i2c2.o
- .debug_info      0x00377f        0xd65 build/default/production/BIOS/pinmap.o
- .debug_info      0x0044e4        0x512 build/default/production/BIOS/spi1.o
- .debug_info      0x0049f6        0x5f0 build/default/production/BIOS/timer1.o
- .debug_info      0x004fe6        0x3bc build/default/production/BIOS/timer2.o
- .debug_info      0x0053a2        0x6b2 build/default/production/BIOS/uart1.o
- .debug_info      0x005a54        0x6b2 build/default/production/BIOS/uart2.o
- .debug_info      0x006106        0x177 build/default/production/main.o
+ .debug_info      0x000000        0x6eb build/default/production/APP/Modbus/Lib/modbus_slave.o
+ .debug_info      0x0006eb        0x2cd build/default/production/APP/Modbus/modbusdefines.o
+ .debug_info      0x0009b8        0x22c build/default/production/APP/app.o
+ .debug_info      0x000be4        0xab8 build/default/production/APP/callback.o
+ .debug_info      0x00169c        0x559 build/default/production/APP/isr.o
+ .debug_info      0x001bf5        0x438 build/default/production/APP/lcdslave.o
+ .debug_info      0x00202d        0x419 build/default/production/APP/sensor.o
+ .debug_info      0x002446        0x179 build/default/production/BIOS/bios.o
+ .debug_info      0x0025bf        0x8ee build/default/production/BIOS/i2c1.o
+ .debug_info      0x002ead        0x8b4 build/default/production/BIOS/i2c2.o
+ .debug_info      0x003761        0xd62 build/default/production/BIOS/pinmap.o
+ .debug_info      0x0044c3        0x50f build/default/production/BIOS/spi1.o
+ .debug_info      0x0049d2        0x5ed build/default/production/BIOS/timer1.o
+ .debug_info      0x004fbf        0x3b9 build/default/production/BIOS/timer2.o
+ .debug_info      0x005378        0x6af build/default/production/BIOS/uart1.o
+ .debug_info      0x005a27        0x6af build/default/production/BIOS/uart2.o
+ .debug_info      0x0060d6        0x174 build/default/production/main.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0xe59
