@@ -10,11 +10,11 @@
 
 
 #include "../BIOS/bios.h"
+#include "D6TSensor.h"
 #include "isr.h"
 #include <bits/alltypes.h>
 #include "Modbus/Lib/modbus_slave.h"
 #include "callback.h"
-#include "sensor.h"
 #include "lcdslave.h"
 
 

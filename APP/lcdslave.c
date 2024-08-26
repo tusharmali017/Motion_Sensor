@@ -10,7 +10,24 @@ static uint16_t iLCDHoldingReg[LCD_TOTAL_HOLDING_REG] = {0};
 void LCDUpdateInputReg(SENSOR_DATA *sensorData)
 {
     uint8_t iIndex = 0;
-    iLCDInputReg[iIndex++] = sensorData->iMotionDetected;
+    iLCDInputReg[iIndex++] = sensorData->tPTAT;
+    iLCDInputReg[iIndex++] = sensorData->tP0;
+    iLCDInputReg[iIndex++] = sensorData->tP1;
+    iLCDInputReg[iIndex++] = sensorData->tP2;
+    iLCDInputReg[iIndex++] = sensorData->tP3;
+    iLCDInputReg[iIndex++] = sensorData->tP4;
+    iLCDInputReg[iIndex++] = sensorData->tP5;
+    iLCDInputReg[iIndex++] = sensorData->tP6;
+    iLCDInputReg[iIndex++] = sensorData->tP7;
+    iLCDInputReg[iIndex++] = sensorData->tP8;
+    iLCDInputReg[iIndex++] = sensorData->tP9;
+    iLCDInputReg[iIndex++] = sensorData->tP10;
+    iLCDInputReg[iIndex++] = sensorData->tP11;
+    iLCDInputReg[iIndex++] = sensorData->tP12;
+    iLCDInputReg[iIndex++] = sensorData->tP13;
+    iLCDInputReg[iIndex++] = sensorData->tP14;
+    iLCDInputReg[iIndex++] = sensorData->tP15;
+    iLCDInputReg[iIndex++] = sensorData->avgTemp;
 }
 
 /*FUNCTION TO GET LCD INPUT REGISTERS */

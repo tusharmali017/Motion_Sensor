@@ -15,7 +15,7 @@
         <itemPath>APP/callback.h</itemPath>
         <itemPath>APP/isr.h</itemPath>
         <itemPath>APP/lcdslave.h</itemPath>
-        <itemPath>APP/sensor.h</itemPath>
+        <itemPath>APP/D6TSensor.h</itemPath>
       </logicalFolder>
       <logicalFolder name="BIOS" displayName="BIOS" projectFiles="true">
         <itemPath>BIOS/bios.h</itemPath>
@@ -29,6 +29,7 @@
         <itemPath>BIOS/uart2.h</itemPath>
       </logicalFolder>
       <itemPath>projectdefines.h</itemPath>
+      <itemPath>version.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -53,7 +54,7 @@
         <itemPath>APP/callback.c</itemPath>
         <itemPath>APP/isr.c</itemPath>
         <itemPath>APP/lcdslave.c</itemPath>
-        <itemPath>APP/sensor.c</itemPath>
+        <itemPath>APP/D6TSensor.c</itemPath>
       </logicalFolder>
       <logicalFolder name="BIOS" displayName="BIOS" projectFiles="true">
         <itemPath>BIOS/bios.c</itemPath>

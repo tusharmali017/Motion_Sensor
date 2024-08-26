@@ -22,11 +22,23 @@ void runApp(void)
 {
     initApp();
 
+    //Enable I2C
+    I2C1_open();
+
+    //wait for 620 msec 
+    timer1Delayms(6200);
+
     while (1)
     {
         modbusSlaveTasks();
         appTasks();
+
+        //wait for 300 msec to read next data
+        timer1Delayms(3000);
     }
+
+    //Disable I2C
+    I2C1_close();
 }
 
 /* EXECUTE APP TASKS WHICH POPULATES ENGINE AND VEHICLE DATA AND DISPLAYS ON LCD DISPLAY */

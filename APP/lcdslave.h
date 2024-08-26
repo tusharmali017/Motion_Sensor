@@ -9,13 +9,13 @@
 #define	LCDSLAVE_H
 
 #include "../BIOS/bios.h"
-#include "sensor.h"
+#include "D6TSensor.h"
 
 
 /***************** MACROS DEFINTIONS ******************************************/
 
 #define LCD_TOTAL_HOLDING_REG 1
-#define LCD_TOTAL_INPUT_REG 1
+#define LCD_TOTAL_INPUT_REG 18
 
 /******************************************************************************/
 
