@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=FWS_Motion_PIR.X
+PROJECTNAME=FWS_Motion_Sensor.X
 
 # Active Configuration
 DEFAULTCONF=default

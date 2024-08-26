@@ -29,6 +29,7 @@
         <itemPath>BIOS/uart2.h</itemPath>
       </logicalFolder>
       <itemPath>projectdefines.h</itemPath>
+      <itemPath>version.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -67,6 +68,7 @@
         <itemPath>BIOS/uart2.c</itemPath>
       </logicalFolder>
     </logicalFolder>
+    <itemPath>main.c</itemPath>
     <itemPath>main.c</itemPath>
   </logicalFolder>
   <sourceRootList>
