@@ -1,14 +1,11 @@
 #include "bios.h"
 
 
-void initBIOS(void)
+void initBIOS()
 {
     initPinmap();
     initTimer1();
-    initTimer2();
     initUART1();
-    initUART2();
-    initializeI2C1();
-    initializeI2C2();
     init_SPI();
+    initializeI2C1();
 }

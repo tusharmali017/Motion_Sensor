@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=APP/Modbus/Lib/modbus_slave.c APP/Modbus/modbusdefines.c APP/app.c APP/callback.c APP/isr.c APP/lcdslave.c APP/sensor.c BIOS/bios.c BIOS/i2c1.c BIOS/i2c2.c BIOS/pinmap.c BIOS/spi1.c BIOS/timer1.c BIOS/timer2.c BIOS/uart1.c BIOS/uart2.c main.c
+SOURCEFILES_QUOTED_IF_SPACED=APP/app.c APP/D6TSensor.c BIOS/bios.c BIOS/i2c1.c BIOS/i2c2.c BIOS/pinmap.c BIOS/spi1.c BIOS/timer1.c BIOS/timer2.c BIOS/uart1.c BIOS/uart2.c main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/APP/Modbus/Lib/modbus_slave.o ${OBJECTDIR}/APP/Modbus/modbusdefines.o ${OBJECTDIR}/APP/app.o ${OBJECTDIR}/APP/callback.o ${OBJECTDIR}/APP/isr.o ${OBJECTDIR}/APP/lcdslave.o ${OBJECTDIR}/APP/sensor.o ${OBJECTDIR}/BIOS/bios.o ${OBJECTDIR}/BIOS/i2c1.o ${OBJECTDIR}/BIOS/i2c2.o ${OBJECTDIR}/BIOS/pinmap.o ${OBJECTDIR}/BIOS/spi1.o ${OBJECTDIR}/BIOS/timer1.o ${OBJECTDIR}/BIOS/timer2.o ${OBJECTDIR}/BIOS/uart1.o ${OBJECTDIR}/BIOS/uart2.o ${OBJECTDIR}/main.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/APP/Modbus/Lib/modbus_slave.o.d ${OBJECTDIR}/APP/Modbus/modbusdefines.o.d ${OBJECTDIR}/APP/app.o.d ${OBJECTDIR}/APP/callback.o.d ${OBJECTDIR}/APP/isr.o.d ${OBJECTDIR}/APP/lcdslave.o.d ${OBJECTDIR}/APP/sensor.o.d ${OBJECTDIR}/BIOS/bios.o.d ${OBJECTDIR}/BIOS/i2c1.o.d ${OBJECTDIR}/BIOS/i2c2.o.d ${OBJECTDIR}/BIOS/pinmap.o.d ${OBJECTDIR}/BIOS/spi1.o.d ${OBJECTDIR}/BIOS/timer1.o.d ${OBJECTDIR}/BIOS/timer2.o.d ${OBJECTDIR}/BIOS/uart1.o.d ${OBJECTDIR}/BIOS/uart2.o.d ${OBJECTDIR}/main.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/APP/app.o ${OBJECTDIR}/APP/D6TSensor.o ${OBJECTDIR}/BIOS/bios.o ${OBJECTDIR}/BIOS/i2c1.o ${OBJECTDIR}/BIOS/i2c2.o ${OBJECTDIR}/BIOS/pinmap.o ${OBJECTDIR}/BIOS/spi1.o ${OBJECTDIR}/BIOS/timer1.o ${OBJECTDIR}/BIOS/timer2.o ${OBJECTDIR}/BIOS/uart1.o ${OBJECTDIR}/BIOS/uart2.o ${OBJECTDIR}/main.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/APP/app.o.d ${OBJECTDIR}/APP/D6TSensor.o.d ${OBJECTDIR}/BIOS/bios.o.d ${OBJECTDIR}/BIOS/i2c1.o.d ${OBJECTDIR}/BIOS/i2c2.o.d ${OBJECTDIR}/BIOS/pinmap.o.d ${OBJECTDIR}/BIOS/spi1.o.d ${OBJECTDIR}/BIOS/timer1.o.d ${OBJECTDIR}/BIOS/timer2.o.d ${OBJECTDIR}/BIOS/uart1.o.d ${OBJECTDIR}/BIOS/uart2.o.d ${OBJECTDIR}/main.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/APP/Modbus/Lib/modbus_slave.o ${OBJECTDIR}/APP/Modbus/modbusdefines.o ${OBJECTDIR}/APP/app.o ${OBJECTDIR}/APP/callback.o ${OBJECTDIR}/APP/isr.o ${OBJECTDIR}/APP/lcdslave.o ${OBJECTDIR}/APP/sensor.o ${OBJECTDIR}/BIOS/bios.o ${OBJECTDIR}/BIOS/i2c1.o ${OBJECTDIR}/BIOS/i2c2.o ${OBJECTDIR}/BIOS/pinmap.o ${OBJECTDIR}/BIOS/spi1.o ${OBJECTDIR}/BIOS/timer1.o ${OBJECTDIR}/BIOS/timer2.o ${OBJECTDIR}/BIOS/uart1.o ${OBJECTDIR}/BIOS/uart2.o ${OBJECTDIR}/main.o
+OBJECTFILES=${OBJECTDIR}/APP/app.o ${OBJECTDIR}/APP/D6TSensor.o ${OBJECTDIR}/BIOS/bios.o ${OBJECTDIR}/BIOS/i2c1.o ${OBJECTDIR}/BIOS/i2c2.o ${OBJECTDIR}/BIOS/pinmap.o ${OBJECTDIR}/BIOS/spi1.o ${OBJECTDIR}/BIOS/timer1.o ${OBJECTDIR}/BIOS/timer2.o ${OBJECTDIR}/BIOS/uart1.o ${OBJECTDIR}/BIOS/uart2.o ${OBJECTDIR}/main.o
 
 # Source Files
-SOURCEFILES=APP/Modbus/Lib/modbus_slave.c APP/Modbus/modbusdefines.c APP/app.c APP/callback.c APP/isr.c APP/lcdslave.c APP/sensor.c BIOS/bios.c BIOS/i2c1.c BIOS/i2c2.c BIOS/pinmap.c BIOS/spi1.c BIOS/timer1.c BIOS/timer2.c BIOS/uart1.c BIOS/uart2.c main.c
+SOURCEFILES=APP/app.c APP/D6TSensor.c BIOS/bios.c BIOS/i2c1.c BIOS/i2c2.c BIOS/pinmap.c BIOS/spi1.c BIOS/timer1.c BIOS/timer2.c BIOS/uart1.c BIOS/uart2.c main.c
 
 
 
@@ -84,52 +84,22 @@ ifneq ($(INFORMATION_MESSAGE), )
 endif
 	${MAKE}  -f nbproject/Makefile-default.mk ${DISTDIR}/FWS_Motion_Sensor.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
-MP_PROCESSOR_OPTION=24FJ128GA606
-MP_LINKER_FILE_OPTION=,--script=p24FJ128GA606.gld
+MP_PROCESSOR_OPTION=24FJ1024GB610
+MP_LINKER_FILE_OPTION=,--script=p24FJ1024GB610.gld
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/APP/Modbus/Lib/modbus_slave.o: APP/Modbus/Lib/modbus_slave.c  .generated_files/flags/default/2d4b30dc75c8fa5ee6683e18b4302c49196ec094 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/APP/Modbus/Lib" 
-	@${RM} ${OBJECTDIR}/APP/Modbus/Lib/modbus_slave.o.d 
-	@${RM} ${OBJECTDIR}/APP/Modbus/Lib/modbus_slave.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  APP/Modbus/Lib/modbus_slave.c  -o ${OBJECTDIR}/APP/Modbus/Lib/modbus_slave.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/APP/Modbus/Lib/modbus_slave.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
-${OBJECTDIR}/APP/Modbus/modbusdefines.o: APP/Modbus/modbusdefines.c  .generated_files/flags/default/5db5c16f4ee896733bbefc0f2a3b9f59eaf0224a .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/APP/Modbus" 
-	@${RM} ${OBJECTDIR}/APP/Modbus/modbusdefines.o.d 
-	@${RM} ${OBJECTDIR}/APP/Modbus/modbusdefines.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  APP/Modbus/modbusdefines.c  -o ${OBJECTDIR}/APP/Modbus/modbusdefines.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/APP/Modbus/modbusdefines.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
 ${OBJECTDIR}/APP/app.o: APP/app.c  .generated_files/flags/default/9aeefe2d0d96ffd09cb996a3414704503ebd97cc .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/APP" 
 	@${RM} ${OBJECTDIR}/APP/app.o.d 
 	@${RM} ${OBJECTDIR}/APP/app.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  APP/app.c  -o ${OBJECTDIR}/APP/app.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/APP/app.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/APP/callback.o: APP/callback.c  .generated_files/flags/default/650bd380111df946e49ae8d35c0af8159203bf25 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/APP/D6TSensor.o: APP/D6TSensor.c  .generated_files/flags/default/7cc397b0a6c312ff9b170382793e6d40e1208041 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/APP" 
-	@${RM} ${OBJECTDIR}/APP/callback.o.d 
-	@${RM} ${OBJECTDIR}/APP/callback.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  APP/callback.c  -o ${OBJECTDIR}/APP/callback.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/APP/callback.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
-${OBJECTDIR}/APP/isr.o: APP/isr.c  .generated_files/flags/default/97dab5536f21cf05f4275317d2e090c5e2581160 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/APP" 
-	@${RM} ${OBJECTDIR}/APP/isr.o.d 
-	@${RM} ${OBJECTDIR}/APP/isr.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  APP/isr.c  -o ${OBJECTDIR}/APP/isr.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/APP/isr.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
-${OBJECTDIR}/APP/lcdslave.o: APP/lcdslave.c  .generated_files/flags/default/126162e2068e9fa1eab559a5652b4af952f5a9c4 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/APP" 
-	@${RM} ${OBJECTDIR}/APP/lcdslave.o.d 
-	@${RM} ${OBJECTDIR}/APP/lcdslave.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  APP/lcdslave.c  -o ${OBJECTDIR}/APP/lcdslave.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/APP/lcdslave.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
-${OBJECTDIR}/APP/sensor.o: APP/sensor.c  .generated_files/flags/default/e98fa1a7c07a88a4f2835c127a1457ac13631b5b .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/APP" 
-	@${RM} ${OBJECTDIR}/APP/sensor.o.d 
-	@${RM} ${OBJECTDIR}/APP/sensor.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  APP/sensor.c  -o ${OBJECTDIR}/APP/sensor.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/APP/sensor.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${RM} ${OBJECTDIR}/APP/D6TSensor.o.d 
+	@${RM} ${OBJECTDIR}/APP/D6TSensor.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  APP/D6TSensor.c  -o ${OBJECTDIR}/APP/D6TSensor.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/APP/D6TSensor.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 ${OBJECTDIR}/BIOS/bios.o: BIOS/bios.c  .generated_files/flags/default/8f3f549ca77ed2b60021b3d0131789f2896d3830 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/BIOS" 
@@ -192,47 +162,17 @@ ${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/f3f8d94e1651d0e466fb
 	${MP_CC} $(MP_EXTRA_CC_PRE)  main.c  -o ${OBJECTDIR}/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 else
-${OBJECTDIR}/APP/Modbus/Lib/modbus_slave.o: APP/Modbus/Lib/modbus_slave.c  .generated_files/flags/default/daaa83b5fc261c023812822d454500a456f31d8b .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/APP/Modbus/Lib" 
-	@${RM} ${OBJECTDIR}/APP/Modbus/Lib/modbus_slave.o.d 
-	@${RM} ${OBJECTDIR}/APP/Modbus/Lib/modbus_slave.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  APP/Modbus/Lib/modbus_slave.c  -o ${OBJECTDIR}/APP/Modbus/Lib/modbus_slave.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/APP/Modbus/Lib/modbus_slave.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
-${OBJECTDIR}/APP/Modbus/modbusdefines.o: APP/Modbus/modbusdefines.c  .generated_files/flags/default/ce0705708ba251bba6bd5426b5d7dfb23162ed85 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/APP/Modbus" 
-	@${RM} ${OBJECTDIR}/APP/Modbus/modbusdefines.o.d 
-	@${RM} ${OBJECTDIR}/APP/Modbus/modbusdefines.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  APP/Modbus/modbusdefines.c  -o ${OBJECTDIR}/APP/Modbus/modbusdefines.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/APP/Modbus/modbusdefines.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
 ${OBJECTDIR}/APP/app.o: APP/app.c  .generated_files/flags/default/e69f469f062f7995cb8bd6755184590b85aa1d87 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/APP" 
 	@${RM} ${OBJECTDIR}/APP/app.o.d 
 	@${RM} ${OBJECTDIR}/APP/app.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  APP/app.c  -o ${OBJECTDIR}/APP/app.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/APP/app.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
-${OBJECTDIR}/APP/callback.o: APP/callback.c  .generated_files/flags/default/9bdac449443232cd595f4e4ec444f6c65e318bb3 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+${OBJECTDIR}/APP/D6TSensor.o: APP/D6TSensor.c  .generated_files/flags/default/5823cc2b40857696529cb8ab686d6571adaa071b .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/APP" 
-	@${RM} ${OBJECTDIR}/APP/callback.o.d 
-	@${RM} ${OBJECTDIR}/APP/callback.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  APP/callback.c  -o ${OBJECTDIR}/APP/callback.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/APP/callback.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
-${OBJECTDIR}/APP/isr.o: APP/isr.c  .generated_files/flags/default/fda3555adad96040da54f4441e6ba0383590b53b .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/APP" 
-	@${RM} ${OBJECTDIR}/APP/isr.o.d 
-	@${RM} ${OBJECTDIR}/APP/isr.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  APP/isr.c  -o ${OBJECTDIR}/APP/isr.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/APP/isr.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
-${OBJECTDIR}/APP/lcdslave.o: APP/lcdslave.c  .generated_files/flags/default/9f151f3d2a2c1d20c5a2b8822241b20f404baf11 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/APP" 
-	@${RM} ${OBJECTDIR}/APP/lcdslave.o.d 
-	@${RM} ${OBJECTDIR}/APP/lcdslave.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  APP/lcdslave.c  -o ${OBJECTDIR}/APP/lcdslave.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/APP/lcdslave.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
-	
-${OBJECTDIR}/APP/sensor.o: APP/sensor.c  .generated_files/flags/default/fa97e3c015de3366349f4648ec7a0e6079d985aa .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/APP" 
-	@${RM} ${OBJECTDIR}/APP/sensor.o.d 
-	@${RM} ${OBJECTDIR}/APP/sensor.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  APP/sensor.c  -o ${OBJECTDIR}/APP/sensor.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/APP/sensor.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	@${RM} ${OBJECTDIR}/APP/D6TSensor.o.d 
+	@${RM} ${OBJECTDIR}/APP/D6TSensor.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  APP/D6TSensor.c  -o ${OBJECTDIR}/APP/D6TSensor.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/APP/D6TSensor.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 ${OBJECTDIR}/BIOS/bios.o: BIOS/bios.c  .generated_files/flags/default/31a0279f4b6def8abff362c31a697a5f6574ab79 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/BIOS" 
@@ -313,7 +253,7 @@ endif
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 ${DISTDIR}/FWS_Motion_Sensor.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
 	@${MKDIR} ${DISTDIR} 
-	${MP_CC} $(MP_EXTRA_LD_PRE)  -o ${DISTDIR}/FWS_Motion_Sensor.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}      -mcpu=$(MP_PROCESSOR_OPTION)        -D__DEBUG=__DEBUG   -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)   -mreserve=data@0x800:0x81B -mreserve=data@0x81C:0x81D -mreserve=data@0x81E:0x81F -mreserve=data@0x820:0x821 -mreserve=data@0x822:0x823 -mreserve=data@0x824:0x827 -mreserve=data@0x82A:0x84F   -Wl,--local-stack,,--defsym=__MPLAB_BUILD=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,-D__DEBUG=__DEBUG,,$(MP_LINKER_FILE_OPTION),--stack=16,--check-sections,--data-init,--pack-data,--handles,--isr,--no-gc-sections,--fill-upper=0,--stackguard=16,--no-force-link,--smart-io,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--report-mem,--memorysummary,${DISTDIR}/memoryfile.xml$(MP_EXTRA_LD_POST)  -mdfp="${DFP_DIR}/xc16" 
+	${MP_CC} $(MP_EXTRA_LD_PRE)  -o ${DISTDIR}/FWS_Motion_Sensor.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}      -mcpu=$(MP_PROCESSOR_OPTION)        -D__DEBUG=__DEBUG   -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)      -Wl,--local-stack,,--defsym=__MPLAB_BUILD=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,-D__DEBUG=__DEBUG,,$(MP_LINKER_FILE_OPTION),--stack=16,--check-sections,--data-init,--pack-data,--handles,--isr,--no-gc-sections,--fill-upper=0,--stackguard=16,--no-force-link,--smart-io,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map",--report-mem,--memorysummary,${DISTDIR}/memoryfile.xml$(MP_EXTRA_LD_POST)  -mdfp="${DFP_DIR}/xc16" 
 	
 else
 ${DISTDIR}/FWS_Motion_Sensor.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   

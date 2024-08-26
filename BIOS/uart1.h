@@ -9,6 +9,7 @@
 #define	UART1_H
 
 #include "../projectdefines.h"
+#include "pinmap.h"
 
 #ifdef	__cplusplus
 extern "C" {
@@ -16,8 +17,10 @@ extern "C" {
 
     void initUART1(void);
     void UART1WriteByte(const uint8_t data);
-    void UART1WriteString(const char* data);
     void UART1WriteData(const uint8_t *data, uint16_t iLength);
+    void UART1WriteString(const char* data);
+
+
 
 
 #ifdef	__cplusplus

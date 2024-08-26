@@ -6,11 +6,9 @@
 void initUART1(void)
 {
     U1MODE = 0;
-    U1MODEbits.BRGH = 1;
-    U1BRG = 415; // 9600 baud at 32Mhz Fosc
+    U1BRG = 25; // 9600 baud at 8Mhz Fosc
 
     U1STA = 0;
-    U1ADMD = 0;
 
     U1MODEbits.UARTEN = 1;
     U1STAbits.UTXEN = 1;
@@ -19,8 +17,8 @@ void initUART1(void)
 
 void UART1WriteByte(const uint8_t data)
 {
-    U1TXREG = data;
-    while (U1STAbits.TRMT == 0);
+    while (U1STAbits.UTXBF); //wait until the transmit buffer is full
+    U1TXREG = data; //load data to buffer register
 }
 
 void UART1WriteString(const char* data)

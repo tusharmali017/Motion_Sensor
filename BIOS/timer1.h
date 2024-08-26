@@ -2,7 +2,7 @@
  * File:   timer1.h
  * Author: tushar.mali
  *
- * Created on 2 February, 2023, 4:33 PM
+ * Created on 21 February, 2024, 12:42 PM
  */
 
 #ifndef TIMER1_H
@@ -14,9 +14,9 @@
 extern "C" {
 #endif
 
-    void initTimer1(void);
-    void timer1Delayms(int ms);
-    void timer1DelayMicroSec(int us);
+void initTimer1();
+void timer1Delay(int us);
+
 
 #ifdef	__cplusplus
 }

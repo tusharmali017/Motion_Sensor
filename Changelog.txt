@@ -1,3 +1,16 @@
+version 1.1.0
+
+completed-
+
+- This code is for interfacing D6T-44L motion sensor with Microchip PIC16-32 dev board having PIC24FJ1024Gb610 controller using I2C protocol.
+- In this, I2C level shifter is used as sensor works on 5V.
+- Tested data received on UART Tera Term terminal.
+
+To be done-
+- Change the controller to PIC24FJ128GA606.
+- Implement the logic to send the collected sensor data to GUI using MODBUS protocol.
+
+
 Version 1.0.0
 
 Completed- 

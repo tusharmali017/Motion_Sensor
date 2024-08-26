@@ -2,28 +2,21 @@
  * File:   app.h
  * Author: tushar.mali
  *
- * Created on 5 September, 2023, 11:10 AM
+ * Created on 21 February, 2024, 12:41 PM
  */
 
 #ifndef APP_H
 #define	APP_H
 
-
 #include "../BIOS/bios.h"
-#include "isr.h"
-#include <bits/alltypes.h>
-#include "Modbus/Lib/modbus_slave.h"
-#include "callback.h"
-#include "sensor.h"
-#include "lcdslave.h"
-
-
+#include "D6TSensor.h"
 
 #ifdef	__cplusplus
 extern "C" {
 #endif
 
-    void runApp(void);
+
+void runApp();
 
 
 #ifdef	__cplusplus

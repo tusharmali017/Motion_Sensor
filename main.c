@@ -1,5 +1,5 @@
 
-// PIC24FJ128GA606 Configuration Bit Settings
+// PIC24FJ1024GB610 Configuration Bit Settings
 
 // 'C' source line config statements
 
@@ -17,12 +17,12 @@
 #pragma config BSLIM = 0x1FFF           // Boot Segment Flash Page Address Limit bits (Enter Hexadecimal value)
 
 // FOSCSEL
-#pragma config FNOSC = PRIPLL           // Oscillator Source Selection (Primary Oscillator with PLL module (XT + PLL, HS + PLL, EC + PLL))
-#pragma config PLLMODE = PLL4X          // PLL Mode Selection (4x PLL selected)
+#pragma config FNOSC = PRI              // Oscillator Source Selection (Primary Oscillator (XT, HS, EC))
+#pragma config PLLMODE = DISABLED       // PLL Mode Selection (No PLL used; PLLEN bit is not available)
 #pragma config IESO = ON                // Two-speed Oscillator Start-up Enable bit (Start up device with FRC, then switch to user-selected oscillator source)
 
 // FOSC
-#pragma config POSCMD = HS              // Primary Oscillator Mode Select bits (HS Crystal Oscillator Mode)
+#pragma config POSCMD = XT              // Primary Oscillator Mode Select bits (XT Crystal Oscillator Mode)
 #pragma config OSCIOFCN = OFF           // OSC2 Pin Function bit (OSC2 is clock output)
 #pragma config SOSCSEL = ON             // SOSC Power Selection Configuration bits (SOSC is used in crystal (SOSCI/SOSCO) mode)
 #pragma config PLLSS = PLL_PRI          // PLL Secondary Selection Configuration bit (PLL is fed by the Primary oscillator)
@@ -44,7 +44,7 @@
 #pragma config DNVPEN = ENABLE          // Downside Voltage Protection Enable bit (Downside protection enabled using ZPBOR when BOR is inactive)
 
 // FICD
-#pragma config ICS = PGD1               // ICD Communication Channel Select bits (Communicate on PGEC1 and PGED1)
+#pragma config ICS = PGD2               // ICD Communication Channel Select bits (Communicate on PGEC1 and PGED1)
 #pragma config JTAGEN = OFF             // JTAG Enable bit (JTAG is disabled)
 #pragma config BTSWP = OFF              // BOOTSWP Disable (BOOTSWP instruction disabled)
 
@@ -57,12 +57,14 @@
 // #pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
 
+
 #include "APP/app.h"
 #include "BIOS/bios.h"
 
-
-int main(void) {
+int main()
+{
     initBIOS();
     runApp();
     return 0;
 }
+

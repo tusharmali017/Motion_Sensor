@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project>
-  <executable name="dist/default/production/FWS_Motion_PIR.X.production.elf">
+  <executable name="dist/default/production/FWS_Motion_Sensor.X.production.elf">
     <memory name="data">
       <units>bytes</units>
       <length>32768</length>
-      <used>806</used>
-      <free>31962</free>
+      <used>390</used>
+      <free>32378</free>
     </memory>
     <memory name="program">
       <units>bytes</units>
-      <length>134400</length>
-      <used>5589</used>
-      <free>128811</free>
+      <length>1056000</length>
+      <used>9657</used>
+      <free>1046343</free>
     </memory>
   </executable>
 </project>
