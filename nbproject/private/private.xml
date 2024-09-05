@@ -3,21 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Code/Fire%20Warning%20System/Using%20Old%20FWS%20Board_Git/FWS_Motion_Sensor.X/version.h</file>
-            <file>file:/D:/Code/Fire%20Warning%20System/Using%20Old%20FWS%20Board_Git/FWS_Motion_Sensor.X/APP/D6TSensor.c</file>
-            <file>file:/D:/Code/Fire%20Warning%20System/Using%20Old%20FWS%20Board_Git/FWS_Motion_Sensor.X/APP/D6TSensor.h</file>
-            <file>file:/D:/Code/Fire%20Warning%20System/Using%20Old%20FWS%20Board_Git/FWS_Motion_Sensor.X/APP/app.c</file>
-            <file>file:/D:/Code/Fire%20Warning%20System/Using%20Old%20FWS%20Board_Git/FWS_Motion_Sensor.X/BIOS/timer1.c</file>
-            <file>file:/D:/Code/Fire%20Warning%20System/Using%20Old%20FWS%20Board_Git/FWS_Motion_Sensor.X/BIOS/timer2.c</file>
-            <file>file:/D:/Code/Fire%20Warning%20System/Using%20Old%20FWS%20Board_Git/FWS_Motion_Sensor.X/APP/callback.c</file>
-            <file>file:/D:/Code/Fire%20Warning%20System/Using%20Old%20FWS%20Board_Git/FWS_Motion_Sensor.X/APP/isr.c</file>
-            <file>file:/D:/Code/Fire%20Warning%20System/Using%20Old%20FWS%20Board_Git/FWS_Motion_Sensor.X/APP/app.h</file>
-            <file>file:/D:/Code/Fire%20Warning%20System/Using%20Old%20FWS%20Board_Git/FWS_Motion_Sensor.X/APP/callback.h</file>
-            <file>file:/D:/Code/Fire%20Warning%20System/Using%20Old%20FWS%20Board_Git/FWS_Motion_Sensor.X/APP/isr.h</file>
-            <file>file:/D:/Code/Fire%20Warning%20System/Using%20Old%20FWS%20Board_Git/FWS_Motion_Sensor.X/APP/lcdslave.c</file>
-            <file>file:/D:/Code/Fire%20Warning%20System/Using%20Old%20FWS%20Board_Git/FWS_Motion_Sensor.X/APP/lcdslave.h</file>
-            <file>file:/D:/Code/Fire%20Warning%20System/Using%20Old%20FWS%20Board_Git/FWS_Motion_Sensor.X/BIOS/timer1.h</file>
-            <file>file:/D:/Code/Fire%20Warning%20System/Using%20Old%20FWS%20Board_Git/FWS_Motion_Sensor.X/Changelog.txt</file>
+            <file>file:/D:/Personal/Study/MPLABX%20Projects/Motion%20Sensor/FWS_Motion_Sensor.X/main.c</file>
+            <file>file:/D:/Personal/Study/MPLABX%20Projects/Motion%20Sensor/FWS_Motion_Sensor.X/BIOS/bios.c</file>
+            <file>file:/D:/Personal/Study/MPLABX%20Projects/Motion%20Sensor/FWS_Motion_Sensor.X/BIOS/timer1.c</file>
+            <file>file:/D:/Personal/Study/MPLABX%20Projects/Motion%20Sensor/FWS_Motion_Sensor.X/BIOS/timer1.h</file>
+            <file>file:/D:/Personal/Study/MPLABX%20Projects/Motion%20Sensor/FWS_Motion_Sensor.X/APP/app.c</file>
+            <file>file:/D:/Personal/Study/MPLABX%20Projects/Motion%20Sensor/FWS_Motion_Sensor.X/APP/lcdslave.c</file>
         </group>
     </open-files>
 </project-private>

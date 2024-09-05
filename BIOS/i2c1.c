@@ -13,7 +13,7 @@ void initializeI2C1()
     I2C1CONL = 0;
     I2C1CONLbits.DISSLW = 1;
     
-    I2C1BRG = 18; // 100KHz Baud for 4MHz Fcy
+    I2C1BRG = 78; // 100KHz Baud for 16MHz Fcy, 32MHz Fosc
 
     _MI2C1IF = 0;
 }

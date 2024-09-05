@@ -4,13 +4,13 @@ Tool Name:
   c:\program files\microchip\xc16\v2.10\bin\bin\..\bin/elf-ld.exe
 
 Command:
-  -TC:\\Users\\TUSHAR~1.MAL\\AppData\\Local\\Temp\\tmp00001c50.00 \
-  -TC:\\Users\\TUSHAR~1.MAL\\AppData\\Local\\Temp\\tmp00001c50.01 \
-  -TC:\\Users\\TUSHAR~1.MAL\\AppData\\Local\\Temp\\tmp00001c50.02 \
-  -TC:\\Users\\TUSHAR~1.MAL\\AppData\\Local\\Temp\\tmp00001c50.03 \
-  -TC:\\Users\\TUSHAR~1.MAL\\AppData\\Local\\Temp\\tmp00001c50.04 \
-  -TC:\\Users\\TUSHAR~1.MAL\\AppData\\Local\\Temp\\tmp00001c50.05 \
-  -TC:\\Users\\TUSHAR~1.MAL\\AppData\\Local\\Temp\\tmp00001c50.06 \
+  -TC:\\Users\\TUSHAR~1.MAL\\AppData\\Local\\Temp\\tmp000020cc.00 \
+  -TC:\\Users\\TUSHAR~1.MAL\\AppData\\Local\\Temp\\tmp000020cc.01 \
+  -TC:\\Users\\TUSHAR~1.MAL\\AppData\\Local\\Temp\\tmp000020cc.02 \
+  -TC:\\Users\\TUSHAR~1.MAL\\AppData\\Local\\Temp\\tmp000020cc.03 \
+  -TC:\\Users\\TUSHAR~1.MAL\\AppData\\Local\\Temp\\tmp000020cc.04 \
+  -TC:\\Users\\TUSHAR~1.MAL\\AppData\\Local\\Temp\\tmp000020cc.05 \
+  -TC:\\Users\\TUSHAR~1.MAL\\AppData\\Local\\Temp\\tmp000020cc.06 \
   -p24FJ128GA606 \
   --mdfp=C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC24F-GA-GB_DFP/1.9.336/xc16 \
   -o \
@@ -31,6 +31,7 @@ Command:
   build/default/debug/APP/callback.o \
   build/default/debug/APP/isr.o \
   build/default/debug/APP/lcdslave.o \
+  build/default/debug/APP/D6TSensor.o \
   build/default/debug/BIOS/bios.o \
   build/default/debug/BIOS/i2c1.o \
   build/default/debug/BIOS/i2c2.o \
@@ -41,7 +42,6 @@ Command:
   build/default/debug/BIOS/uart1.o \
   build/default/debug/BIOS/uart2.o \
   build/default/debug/main.o \
-  build/default/debug/APP/D6TSensor.o \
   --local-stack \
   --defsym=__MPLAB_BUILD=1 \
   --defsym=__MPLAB_DEBUG=1 \
@@ -115,9 +115,9 @@ section                    address   length (PC units)   length (bytes) (dec)
 .text                        0x100               0x186           0x249  (585)
 .text                        0x286               0x89c           0xcea  (3306)
 .dinit                       0xb22               0x194           0x25e  (606)
-.text                        0xcb6               0x648           0x96c  (2412)
+.text                        0xcb6               0x620           0x930  (2352)
 
-                 Total "program" memory used (bytes):         0x1afd  (6909) 5%
+                 Total "program" memory used (bytes):         0x1ac1  (6849) 5%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x8000]
@@ -242,17 +242,16 @@ External Symbols in Program Memory (by address):
                   0x001132                  _initCallback
                   0x00114a                  _tmr1Callback
                   0x001182                  _uart2RxCallback
-                  0x0011a0                  _initTimer1
-                  0x0011b8                  _timer1DelayMicroSec
-                  0x0011e0                  _timer1Delayms
-                  0x00121e                  _runApp
-                  0x00126a                  _init_SPI
-                  0x001286                  _SPI1_Write
-                  0x0012aa                  _initTimer2
-                  0x0012c4                  _setTMR1Callback
-                  0x0012d0                  _setUART2Callback
-                  0x0012dc                  _initBIOS
-                  0x0012f2                  _main
+                  0x0011b6                  _runApp
+                  0x001202                  _initTimer2
+                  0x00121a                  _timer2Delayms
+                  0x001244                  _init_SPI
+                  0x001260                  _SPI1_Write
+                  0x001284                  _setTMR1Callback
+                  0x001290                  _setUART2Callback
+                  0x00129c                  _initTimer1
+                  0x0012b4                  _initBIOS
+                  0x0012ca                  _main
                   0x015f00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
@@ -282,7 +281,7 @@ External Symbols in Program Memory (by name):
                   0x000ac0                  _LCDUpdateHoldingRegisters
                   0x0008dc                  _LCDUpdateInputReg
                   0x000b0c                  _LCDUpdateSingleRegister
-                  0x001286                  _SPI1_Write
+                  0x001260                  _SPI1_Write
                   0x001062                  _UART1WriteByte
                   0x001094                  _UART1WriteData
                   0x00107a                  _UART1WriteString
@@ -300,27 +299,26 @@ External Symbols in Program Memory (by name):
                   0x0008a6                  _calc_crc
                   0x000fa8                  _getCRC16
                   0x0008d4                  _getSensorDataObj
-                  0x0012dc                  _initBIOS
+                  0x0012b4                  _initBIOS
                   0x001132                  _initCallback
                   0x000286                  _initModbusSlave
                   0x000ef0                  _initPinmap
-                  0x0011a0                  _initTimer1
-                  0x0012aa                  _initTimer2
+                  0x00129c                  _initTimer1
+                  0x001202                  _initTimer2
                   0x00104a                  _initUART1
                   0x0010be                  _initUART2
-                  0x00126a                  _init_SPI
+                  0x001244                  _init_SPI
                   0x000cb6                  _initializeI2C1
                   0x000dd4                  _initializeI2C2
                   0x001006                  _isCRC16OK
-                  0x0012f2                  _main
+                  0x0012ca                  _main
                   0x000320                  _modbusSlaveGetErrorCode
                   0x0002b2                  _modbusSlaveTasks
                   0x00066e                  _populateSensorData
-                  0x00121e                  _runApp
-                  0x0012c4                  _setTMR1Callback
-                  0x0012d0                  _setUART2Callback
-                  0x0011b8                  _timer1DelayMicroSec
-                  0x0011e0                  _timer1Delayms
+                  0x0011b6                  _runApp
+                  0x001284                  _setTMR1Callback
+                  0x001290                  _setUART2Callback
+                  0x00121a                  _timer2Delayms
                   0x00114a                  _tmr1Callback
                   0x001182                  _uart2RxCallback
 
@@ -386,6 +384,7 @@ LOAD build/default/debug/APP/app.o
 LOAD build/default/debug/APP/callback.o
 LOAD build/default/debug/APP/isr.o
 LOAD build/default/debug/APP/lcdslave.o
+LOAD build/default/debug/APP/D6TSensor.o
 LOAD build/default/debug/BIOS/bios.o
 LOAD build/default/debug/BIOS/i2c1.o
 LOAD build/default/debug/BIOS/i2c2.o
@@ -396,7 +395,6 @@ LOAD build/default/debug/BIOS/timer2.o
 LOAD build/default/debug/BIOS/uart1.o
 LOAD build/default/debug/BIOS/uart2.o
 LOAD build/default/debug/main.o
-LOAD build/default/debug/APP/D6TSensor.o
                     0x0001                  __MPLAB_BUILD = 0x1
                     0x0001                  __MPLAB_DEBUG = 0x1
                     0x0001                  __DEBUG = 0x1
@@ -490,25 +488,25 @@ __FDEVOPT1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x648f
+.debug_info       0x000000       0x640a
  *(.debug_info)
- .debug_info      0x000000        0x6f2 build/default/debug/APP/Modbus/Lib/modbus_slave.o
- .debug_info      0x0006f2        0x2d4 build/default/debug/APP/Modbus/modbusdefines.o
- .debug_info      0x0009c6        0x233 build/default/debug/APP/app.o
- .debug_info      0x000bf9        0xabf build/default/debug/APP/callback.o
- .debug_info      0x0016b8        0x560 build/default/debug/APP/isr.o
- .debug_info      0x001c18        0x54c build/default/debug/APP/lcdslave.o
- .debug_info      0x002164        0x180 build/default/debug/BIOS/bios.o
- .debug_info      0x0022e4        0x8f5 build/default/debug/BIOS/i2c1.o
- .debug_info      0x002bd9        0x8bb build/default/debug/BIOS/i2c2.o
- .debug_info      0x003494        0xd69 build/default/debug/BIOS/pinmap.o
- .debug_info      0x0041fd        0x516 build/default/debug/BIOS/spi1.o
- .debug_info      0x004713        0x5f4 build/default/debug/BIOS/timer1.o
- .debug_info      0x004d07        0x3c0 build/default/debug/BIOS/timer2.o
- .debug_info      0x0050c7        0x6b6 build/default/debug/BIOS/uart1.o
- .debug_info      0x00577d        0x6b6 build/default/debug/BIOS/uart2.o
- .debug_info      0x005e33        0x17b build/default/debug/main.o
- .debug_info      0x005fae        0x4e1 build/default/debug/APP/D6TSensor.o
+ .debug_info      0x000000        0x6ee build/default/debug/APP/Modbus/Lib/modbus_slave.o
+ .debug_info      0x0006ee        0x2d0 build/default/debug/APP/Modbus/modbusdefines.o
+ .debug_info      0x0009be        0x22f build/default/debug/APP/app.o
+ .debug_info      0x000bed        0xabb build/default/debug/APP/callback.o
+ .debug_info      0x0016a8        0x55c build/default/debug/APP/isr.o
+ .debug_info      0x001c04        0x548 build/default/debug/APP/lcdslave.o
+ .debug_info      0x00214c        0x4dd build/default/debug/APP/D6TSensor.o
+ .debug_info      0x002629        0x17c build/default/debug/BIOS/bios.o
+ .debug_info      0x0027a5        0x8f1 build/default/debug/BIOS/i2c1.o
+ .debug_info      0x003096        0x8b7 build/default/debug/BIOS/i2c2.o
+ .debug_info      0x00394d        0xd65 build/default/debug/BIOS/pinmap.o
+ .debug_info      0x0046b2        0x512 build/default/debug/BIOS/spi1.o
+ .debug_info      0x004bc4        0x3fa build/default/debug/BIOS/timer1.o
+ .debug_info      0x004fbe        0x571 build/default/debug/BIOS/timer2.o
+ .debug_info      0x00552f        0x6b2 build/default/debug/BIOS/uart1.o
+ .debug_info      0x005be1        0x6b2 build/default/debug/BIOS/uart2.o
+ .debug_info      0x006293        0x177 build/default/debug/main.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0xe88
@@ -519,19 +517,19 @@ __FDEVOPT1
  .debug_abbrev    0x000226        0x12c build/default/debug/APP/callback.o
  .debug_abbrev    0x000352         0xc2 build/default/debug/APP/isr.o
  .debug_abbrev    0x000414         0xb0 build/default/debug/APP/lcdslave.o
- .debug_abbrev    0x0004c4         0x34 build/default/debug/BIOS/bios.o
- .debug_abbrev    0x0004f8        0x170 build/default/debug/BIOS/i2c1.o
- .debug_abbrev    0x000668        0x13b build/default/debug/BIOS/i2c2.o
- .debug_abbrev    0x0007a3         0xd8 build/default/debug/BIOS/pinmap.o
- .debug_abbrev    0x00087b         0xda build/default/debug/BIOS/spi1.o
- .debug_abbrev    0x000955        0x12f build/default/debug/BIOS/timer1.o
- .debug_abbrev    0x000a84         0xc3 build/default/debug/BIOS/timer2.o
- .debug_abbrev    0x000b47         0xfb build/default/debug/BIOS/uart1.o
- .debug_abbrev    0x000c42         0xfb build/default/debug/BIOS/uart2.o
- .debug_abbrev    0x000d3d         0x36 build/default/debug/main.o
- .debug_abbrev    0x000d73        0x115 build/default/debug/APP/D6TSensor.o
+ .debug_abbrev    0x0004c4        0x115 build/default/debug/APP/D6TSensor.o
+ .debug_abbrev    0x0005d9         0x34 build/default/debug/BIOS/bios.o
+ .debug_abbrev    0x00060d        0x170 build/default/debug/BIOS/i2c1.o
+ .debug_abbrev    0x00077d        0x13b build/default/debug/BIOS/i2c2.o
+ .debug_abbrev    0x0008b8         0xd8 build/default/debug/BIOS/pinmap.o
+ .debug_abbrev    0x000990         0xda build/default/debug/BIOS/spi1.o
+ .debug_abbrev    0x000a6a         0xc5 build/default/debug/BIOS/timer1.o
+ .debug_abbrev    0x000b2f        0x12d build/default/debug/BIOS/timer2.o
+ .debug_abbrev    0x000c5c         0xfb build/default/debug/BIOS/uart1.o
+ .debug_abbrev    0x000d57         0xfb build/default/debug/BIOS/uart2.o
+ .debug_abbrev    0x000e52         0x36 build/default/debug/main.o
 
-.debug_line       0x000000       0x104b
+.debug_line       0x000000       0x103f
  *(.debug_line)
  .debug_line      0x000000        0x13d build/default/debug/APP/Modbus/Lib/modbus_slave.o
  .debug_line      0x00013d         0xae build/default/debug/APP/Modbus/modbusdefines.o
@@ -539,19 +537,19 @@ __FDEVOPT1
  .debug_line      0x00023a        0x152 build/default/debug/APP/callback.o
  .debug_line      0x00038c        0x131 build/default/debug/APP/isr.o
  .debug_line      0x0004bd         0xc9 build/default/debug/APP/lcdslave.o
- .debug_line      0x000586         0x3f build/default/debug/BIOS/bios.o
- .debug_line      0x0005c5        0x148 build/default/debug/BIOS/i2c1.o
- .debug_line      0x00070d        0x145 build/default/debug/BIOS/i2c2.o
- .debug_line      0x000852        0x130 build/default/debug/BIOS/pinmap.o
- .debug_line      0x000982        0x119 build/default/debug/BIOS/spi1.o
- .debug_line      0x000a9b        0x125 build/default/debug/BIOS/timer1.o
- .debug_line      0x000bc0        0x10e build/default/debug/BIOS/timer2.o
- .debug_line      0x000cce        0x121 build/default/debug/BIOS/uart1.o
- .debug_line      0x000def        0x121 build/default/debug/BIOS/uart2.o
- .debug_line      0x000f10         0x37 build/default/debug/main.o
- .debug_line      0x000f47        0x104 build/default/debug/APP/D6TSensor.o
+ .debug_line      0x000586        0x104 build/default/debug/APP/D6TSensor.o
+ .debug_line      0x00068a         0x3f build/default/debug/BIOS/bios.o
+ .debug_line      0x0006c9        0x148 build/default/debug/BIOS/i2c1.o
+ .debug_line      0x000811        0x145 build/default/debug/BIOS/i2c2.o
+ .debug_line      0x000956        0x130 build/default/debug/BIOS/pinmap.o
+ .debug_line      0x000a86        0x119 build/default/debug/BIOS/spi1.o
+ .debug_line      0x000b9f        0x10f build/default/debug/BIOS/timer1.o
+ .debug_line      0x000cae        0x118 build/default/debug/BIOS/timer2.o
+ .debug_line      0x000dc6        0x121 build/default/debug/BIOS/uart1.o
+ .debug_line      0x000ee7        0x121 build/default/debug/BIOS/uart2.o
+ .debug_line      0x001008         0x37 build/default/debug/main.o
 
-.debug_frame      0x000000        0x8ae
+.debug_frame      0x000000        0x894
  *(.debug_frame)
  .debug_frame     0x000000         0x96 build/default/debug/APP/Modbus/Lib/modbus_slave.o
  .debug_frame     0x000096         0x48 build/default/debug/APP/Modbus/modbusdefines.o
@@ -559,17 +557,17 @@ __FDEVOPT1
  .debug_frame     0x000140         0x62 build/default/debug/APP/callback.o
  .debug_frame     0x0001a2         0xd4 build/default/debug/APP/isr.o
  .debug_frame     0x000276         0x96 build/default/debug/APP/lcdslave.o
- .debug_frame     0x00030c         0x2e build/default/debug/BIOS/bios.o
- .debug_frame     0x00033a        0x14c build/default/debug/BIOS/i2c1.o
- .debug_frame     0x000486        0x14c build/default/debug/BIOS/i2c2.o
- .debug_frame     0x0005d2         0x48 build/default/debug/BIOS/pinmap.o
- .debug_frame     0x00061a         0x48 build/default/debug/BIOS/spi1.o
- .debug_frame     0x000662         0x62 build/default/debug/BIOS/timer1.o
- .debug_frame     0x0006c4         0x2e build/default/debug/BIOS/timer2.o
- .debug_frame     0x0006f2         0x7c build/default/debug/BIOS/uart1.o
- .debug_frame     0x00076e         0x7c build/default/debug/BIOS/uart2.o
- .debug_frame     0x0007ea         0x2e build/default/debug/main.o
- .debug_frame     0x000818         0x96 build/default/debug/APP/D6TSensor.o
+ .debug_frame     0x00030c         0x96 build/default/debug/APP/D6TSensor.o
+ .debug_frame     0x0003a2         0x2e build/default/debug/BIOS/bios.o
+ .debug_frame     0x0003d0        0x14c build/default/debug/BIOS/i2c1.o
+ .debug_frame     0x00051c        0x14c build/default/debug/BIOS/i2c2.o
+ .debug_frame     0x000668         0x48 build/default/debug/BIOS/pinmap.o
+ .debug_frame     0x0006b0         0x48 build/default/debug/BIOS/spi1.o
+ .debug_frame     0x0006f8         0x2e build/default/debug/BIOS/timer1.o
+ .debug_frame     0x000726         0x48 build/default/debug/BIOS/timer2.o
+ .debug_frame     0x00076e         0x7c build/default/debug/BIOS/uart1.o
+ .debug_frame     0x0007ea         0x7c build/default/debug/BIOS/uart2.o
+ .debug_frame     0x000866         0x2e build/default/debug/main.o
 
 .debug_str        0x000000        0x2dc
  *(.debug_str)
@@ -578,15 +576,15 @@ __FDEVOPT1
  .debug_str       0x000089         0x9a build/default/debug/APP/callback.o
  .debug_str       0x000123         0x1b build/default/debug/APP/isr.o
  .debug_str       0x00013e         0x1a build/default/debug/APP/lcdslave.o
- .debug_str       0x000158         0x3e build/default/debug/BIOS/i2c1.o
- .debug_str       0x000196         0x35 build/default/debug/BIOS/i2c2.o
- .debug_str       0x0001cb         0x75 build/default/debug/BIOS/pinmap.o
- .debug_str       0x000240         0x41 build/default/debug/BIOS/spi1.o
- .debug_str       0x000281         0x13 build/default/debug/BIOS/timer1.o
- .debug_str       0x000294          0xa build/default/debug/BIOS/timer2.o
- .debug_str       0x00029e         0x15 build/default/debug/BIOS/uart1.o
- .debug_str       0x0002b3         0x15 build/default/debug/BIOS/uart2.o
- .debug_str       0x0002c8         0x14 build/default/debug/APP/D6TSensor.o
+ .debug_str       0x000158         0x14 build/default/debug/APP/D6TSensor.o
+ .debug_str       0x00016c         0x3e build/default/debug/BIOS/i2c1.o
+ .debug_str       0x0001aa         0x35 build/default/debug/BIOS/i2c2.o
+ .debug_str       0x0001df         0x75 build/default/debug/BIOS/pinmap.o
+ .debug_str       0x000254         0x41 build/default/debug/BIOS/spi1.o
+ .debug_str       0x000295          0xa build/default/debug/BIOS/timer1.o
+ .debug_str       0x00029f         0x13 build/default/debug/BIOS/timer2.o
+ .debug_str       0x0002b2         0x15 build/default/debug/BIOS/uart1.o
+ .debug_str       0x0002c7         0x15 build/default/debug/BIOS/uart2.o
 
 .debug_loc
  *(.debug_loc)
@@ -595,7 +593,7 @@ __FDEVOPT1
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x6af
+                  0x000000        0x697
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0xeb build/default/debug/APP/Modbus/Lib/modbus_slave.o
@@ -610,27 +608,27 @@ __FDEVOPT1
  .debug_pubnames
                   0x000209         0x96 build/default/debug/APP/lcdslave.o
  .debug_pubnames
-                  0x00029f         0x1f build/default/debug/BIOS/bios.o
+                  0x00029f         0xb7 build/default/debug/APP/D6TSensor.o
  .debug_pubnames
-                  0x0002be         0xd7 build/default/debug/BIOS/i2c1.o
+                  0x000356         0x1f build/default/debug/BIOS/bios.o
  .debug_pubnames
-                  0x000395         0xd7 build/default/debug/BIOS/i2c2.o
+                  0x000375         0xd7 build/default/debug/BIOS/i2c1.o
  .debug_pubnames
-                  0x00046c         0x21 build/default/debug/BIOS/pinmap.o
+                  0x00044c         0xd7 build/default/debug/BIOS/i2c2.o
  .debug_pubnames
-                  0x00048d         0x2e build/default/debug/BIOS/spi1.o
+                  0x000523         0x21 build/default/debug/BIOS/pinmap.o
  .debug_pubnames
-                  0x0004bb         0x4b build/default/debug/BIOS/timer1.o
+                  0x000544         0x2e build/default/debug/BIOS/spi1.o
  .debug_pubnames
-                  0x000506         0x21 build/default/debug/BIOS/timer2.o
+                  0x000572         0x21 build/default/debug/BIOS/timer1.o
  .debug_pubnames
-                  0x000527         0x5b build/default/debug/BIOS/uart1.o
+                  0x000593         0x33 build/default/debug/BIOS/timer2.o
  .debug_pubnames
-                  0x000582         0x5b build/default/debug/BIOS/uart2.o
+                  0x0005c6         0x5b build/default/debug/BIOS/uart1.o
  .debug_pubnames
-                  0x0005dd         0x1b build/default/debug/main.o
+                  0x000621         0x5b build/default/debug/BIOS/uart2.o
  .debug_pubnames
-                  0x0005f8         0xb7 build/default/debug/APP/D6TSensor.o
+                  0x00067c         0x1b build/default/debug/main.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -650,27 +648,27 @@ __FDEVOPT1
  .debug_aranges
                   0x000078         0x18 build/default/debug/APP/lcdslave.o
  .debug_aranges
-                  0x000090         0x18 build/default/debug/BIOS/bios.o
+                  0x000090         0x18 build/default/debug/APP/D6TSensor.o
  .debug_aranges
-                  0x0000a8         0x18 build/default/debug/BIOS/i2c1.o
+                  0x0000a8         0x18 build/default/debug/BIOS/bios.o
  .debug_aranges
-                  0x0000c0         0x18 build/default/debug/BIOS/i2c2.o
+                  0x0000c0         0x18 build/default/debug/BIOS/i2c1.o
  .debug_aranges
-                  0x0000d8         0x18 build/default/debug/BIOS/pinmap.o
+                  0x0000d8         0x18 build/default/debug/BIOS/i2c2.o
  .debug_aranges
-                  0x0000f0         0x18 build/default/debug/BIOS/spi1.o
+                  0x0000f0         0x18 build/default/debug/BIOS/pinmap.o
  .debug_aranges
-                  0x000108         0x18 build/default/debug/BIOS/timer1.o
+                  0x000108         0x18 build/default/debug/BIOS/spi1.o
  .debug_aranges
-                  0x000120         0x18 build/default/debug/BIOS/timer2.o
+                  0x000120         0x18 build/default/debug/BIOS/timer1.o
  .debug_aranges
-                  0x000138         0x18 build/default/debug/BIOS/uart1.o
+                  0x000138         0x18 build/default/debug/BIOS/timer2.o
  .debug_aranges
-                  0x000150         0x18 build/default/debug/BIOS/uart2.o
+                  0x000150         0x18 build/default/debug/BIOS/uart1.o
  .debug_aranges
-                  0x000168         0x18 build/default/debug/main.o
+                  0x000168         0x18 build/default/debug/BIOS/uart2.o
  .debug_aranges
-                  0x000180         0x18 build/default/debug/APP/D6TSensor.o
+                  0x000180         0x18 build/default/debug/main.o
                     0x0000                  WREG0 = 0x0
                     0x0000                  _WREG0 = 0x0
                     0x0002                  WREG1 = 0x2
@@ -2656,27 +2654,27 @@ LOAD data_init
  .debug_pubtypes
                   0x000434         0x47 build/default/debug/APP/lcdslave.o
  .debug_pubtypes
-                  0x00047b         0x12 build/default/debug/BIOS/bios.o
+                  0x00047b         0x47 build/default/debug/APP/D6TSensor.o
  .debug_pubtypes
-                  0x00048d         0x86 build/default/debug/BIOS/i2c1.o
+                  0x0004c2         0x12 build/default/debug/BIOS/bios.o
  .debug_pubtypes
-                  0x000513         0x86 build/default/debug/BIOS/i2c2.o
+                  0x0004d4         0x86 build/default/debug/BIOS/i2c1.o
  .debug_pubtypes
-                  0x000599        0x182 build/default/debug/BIOS/pinmap.o
+                  0x00055a         0x86 build/default/debug/BIOS/i2c2.o
  .debug_pubtypes
-                  0x00071b         0x79 build/default/debug/BIOS/spi1.o
+                  0x0005e0        0x182 build/default/debug/BIOS/pinmap.o
  .debug_pubtypes
-                  0x000794         0x5b build/default/debug/BIOS/timer1.o
+                  0x000762         0x79 build/default/debug/BIOS/spi1.o
  .debug_pubtypes
-                  0x0007ef         0x3e build/default/debug/BIOS/timer2.o
+                  0x0007db         0x3e build/default/debug/BIOS/timer1.o
  .debug_pubtypes
-                  0x00082d         0x6b build/default/debug/BIOS/uart1.o
+                  0x000819         0x5b build/default/debug/BIOS/timer2.o
  .debug_pubtypes
-                  0x000898         0x6b build/default/debug/BIOS/uart2.o
+                  0x000874         0x6b build/default/debug/BIOS/uart1.o
  .debug_pubtypes
-                  0x000903         0x12 build/default/debug/main.o
+                  0x0008df         0x6b build/default/debug/BIOS/uart2.o
  .debug_pubtypes
-                  0x000915         0x47 build/default/debug/APP/D6TSensor.o
+                  0x00094a         0x12 build/default/debug/main.o
 
 __c30_signature
                   0x00095c         0x72
@@ -2693,27 +2691,27 @@ __c30_signature
  __c30_signature
                   0x00097a          0x6 build/default/debug/APP/lcdslave.o
  __c30_signature
-                  0x000980          0x6 build/default/debug/BIOS/bios.o
+                  0x000980          0x6 build/default/debug/APP/D6TSensor.o
  __c30_signature
-                  0x000986          0x6 build/default/debug/BIOS/i2c1.o
+                  0x000986          0x6 build/default/debug/BIOS/bios.o
  __c30_signature
-                  0x00098c          0x6 build/default/debug/BIOS/i2c2.o
+                  0x00098c          0x6 build/default/debug/BIOS/i2c1.o
  __c30_signature
-                  0x000992          0x6 build/default/debug/BIOS/pinmap.o
+                  0x000992          0x6 build/default/debug/BIOS/i2c2.o
  __c30_signature
-                  0x000998          0x6 build/default/debug/BIOS/spi1.o
+                  0x000998          0x6 build/default/debug/BIOS/pinmap.o
  __c30_signature
-                  0x00099e          0x6 build/default/debug/BIOS/timer1.o
+                  0x00099e          0x6 build/default/debug/BIOS/spi1.o
  __c30_signature
-                  0x0009a4          0x6 build/default/debug/BIOS/timer2.o
+                  0x0009a4          0x6 build/default/debug/BIOS/timer1.o
  __c30_signature
-                  0x0009aa          0x6 build/default/debug/BIOS/uart1.o
+                  0x0009aa          0x6 build/default/debug/BIOS/timer2.o
  __c30_signature
-                  0x0009b0          0x6 build/default/debug/BIOS/uart2.o
+                  0x0009b0          0x6 build/default/debug/BIOS/uart1.o
  __c30_signature
-                  0x0009b6          0x6 build/default/debug/main.o
+                  0x0009b6          0x6 build/default/debug/BIOS/uart2.o
  __c30_signature
-                  0x0009bc          0x6 build/default/debug/APP/D6TSensor.o
+                  0x0009bc          0x6 build/default/debug/main.o
  __c30_signature
                   0x0009c2          0x6 c:/program files/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
  __c30_signature
@@ -2809,7 +2807,7 @@ __c30_signature
 .dinit            0x000b22        0x194
  .dinit           0x000b22        0x194 data_init
 
-.text             0x000cb6        0x648
+.text             0x000cb6        0x620
  .text            0x000cb6        0x11e build/default/debug/BIOS/i2c1.o
                   0x000cb6                  _initializeI2C1
                   0x000cca                  _I2C1_open
@@ -2851,21 +2849,20 @@ __c30_signature
                   0x001132                  _initCallback
                   0x00114a                  _tmr1Callback
                   0x001182                  _uart2RxCallback
- .text            0x0011a0         0x68 build/default/debug/BIOS/timer1.o
-                  0x0011a0                  _initTimer1
-                  0x0011b8                  _timer1DelayMicroSec
-                  0x0011e0                  _timer1Delayms
- .text            0x001208         0x62 build/default/debug/APP/app.o
-                  0x00121e                  _runApp
- .text            0x00126a         0x40 build/default/debug/BIOS/spi1.o
-                  0x00126a                  _init_SPI
-                  0x001286                  _SPI1_Write
- .text            0x0012aa         0x1a build/default/debug/BIOS/timer2.o
-                  0x0012aa                  _initTimer2
- .text            0x0012c4         0x18 build/default/debug/APP/isr.o
-                  0x0012c4                  _setTMR1Callback
-                  0x0012d0                  _setUART2Callback
- .text            0x0012dc         0x16 build/default/debug/BIOS/bios.o
-                  0x0012dc                  _initBIOS
- .text            0x0012f2          0xc build/default/debug/main.o
-                  0x0012f2                  _main
+ .text            0x0011a0         0x62 build/default/debug/APP/app.o
+                  0x0011b6                  _runApp
+ .text            0x001202         0x42 build/default/debug/BIOS/timer2.o
+                  0x001202                  _initTimer2
+                  0x00121a                  _timer2Delayms
+ .text            0x001244         0x40 build/default/debug/BIOS/spi1.o
+                  0x001244                  _init_SPI
+                  0x001260                  _SPI1_Write
+ .text            0x001284         0x18 build/default/debug/APP/isr.o
+                  0x001284                  _setTMR1Callback
+                  0x001290                  _setUART2Callback
+ .text            0x00129c         0x18 build/default/debug/BIOS/timer1.o
+                  0x00129c                  _initTimer1
+ .text            0x0012b4         0x16 build/default/debug/BIOS/bios.o
+                  0x0012b4                  _initBIOS
+ .text            0x0012ca          0xc build/default/debug/main.o
+                  0x0012ca                  _main

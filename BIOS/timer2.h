@@ -15,7 +15,7 @@ extern "C" {
 #endif
 
     void initTimer2();
-    void delayms(uint16_t ims);
+    void timer2Delayms(int ms);
     
     
 

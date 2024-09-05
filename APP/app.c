@@ -26,7 +26,7 @@ void runApp(void)
     I2C1_open();
 
     //wait for 620 msec 
-    timer1Delayms(6200);
+    timer2Delayms(620);
 
     while (1)
     {
@@ -34,7 +34,7 @@ void runApp(void)
         appTasks();
 
         //wait for 300 msec to read next data
-        timer1Delayms(3000);
+        timer2Delayms(300);
     }
 
     //Disable I2C

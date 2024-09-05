@@ -15,8 +15,6 @@ extern "C" {
 #endif
 
     void initTimer1(void);
-    void timer1Delayms(int ms);
-    void timer1DelayMicroSec(int us);
 
 #ifdef	__cplusplus
 }
